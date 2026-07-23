@@ -3,11 +3,11 @@ CFLAGS = -O3 -march=native -Wall -Wextra -std=c99 -Iinclude
 LDFLAGS = -lm
 
 # 源文件
-SRCS = src/sm4_constants.c \
-       src/sm4_baseline.c \
+SRCS = src/sm4_baseline.c \
        src/sm4_ttable.c \
        src/sm4_shuffle.c \
        src/sm4_ctr.c
+
 
 OBJS = $(SRCS:.c=.o)
 
