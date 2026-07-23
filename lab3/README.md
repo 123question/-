@@ -3,29 +3,38 @@
 ## 项目结构
 lab3/
 
-│
-
 ├── README.md # 项目说明文档
 
 ├── Makefile # 编译配置文件
 
-│
 ├── include/ # 头文件目录
+
 │ ├── sm4.h # 主头文件，包含所有公共接口
+
 │ ├── sm4_constants.h # S盒、FK、CK等常量定义
+
 │ ├── sm4_baseline.h # 基础实现接口
+
 │ ├── sm4_ttable.h # T-table优化接口
+
 │ ├── sm4_shuffle.h # Shuffle优化接口
+
 │ └── sm4_ctr.h # CTR模式接口
-│
+
 ├── src/ # 源代码目录
+
 │ ├── sm4_baseline.c # 基础实现
+
 │ ├── sm4_ttable.c # T-table优化实现
+
 │ ├── sm4_shuffle.c # Shuffle优化实现
+
 │ └── sm4_ctr.c # CTR模式实现
-│
+
 ├── test/ # 测试目录
+
   ├── test_sm4.c # 单元测试（功能验证）
+  
   └── test_perf.c # 性能测试（速度测试）
 
 
