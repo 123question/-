@@ -1,9 +1,11 @@
+#define _POSIX_C_SOURCE 199309L 
 #include "../include/sm4.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
+/* 高精度计时器 */
 static inline double get_time(void) {
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
