@@ -19,6 +19,8 @@ lab3/
 
 │  ├── sm4_shuffle.h # Shuffle优化接口
 
+│  ├──sm4_avx512.h # AVX-512优化接口
+
 │  └── sm4_ctr.h # CTR模式接口
 
 ├── src/ # 源代码目录
@@ -28,6 +30,8 @@ lab3/
 │  ├── sm4_ttable.c # T-table优化实现
 
 │  ├── sm4_shuffle.c # Shuffle优化实现
+
+│  ├── sm4_avx512.c # AVX-512优化实现
 
 │  └── sm4_ctr.c # CTR模式实现
 
@@ -45,8 +49,8 @@ lab3/
 1. **基础实现 (Baseline)** - 作为性能对比基准
 2. **T-table 优化** - 预计算S盒+线性变换，4次查表替代计算
 3. **Shuffle 优化** - 比特切片技术，同时处理8个数据块
-4. **CTR 工作模式** - 流模式加密
-
+4. **AVX-512 优化** - 使用AVX-512指令集，支持16路并行处理（需CPU支持）
+5. **CTR 工作模式** - 流模式加密
 ## 编译运行
 
 ```bash
